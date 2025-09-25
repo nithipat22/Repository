@@ -251,23 +251,31 @@ function choose(house){
     showQuestion();
 }
 
-function showQuestion(){
-    if(currentQ >= questions.length){
+function showQuestion() {
+    if (currentQ >= questions.length) {
         currentPlayer++;
         currentQ = 0;
-        if(currentPlayer >= players.length){
+        if (currentPlayer >= players.length) {
             showResults();
             return;
         }
     }
+
     const player = players[currentPlayer];
     const q = questions[currentQ];
-    let html = `<h2>${player.name} ตอบคำถาม</h2>
-                <p>${q.q}</p>
-                <img src="${q.img}" alt="question image" style="width:200px; height:150px; margin:15px 0;">`;
+
+    // ใช้ backtick `...` แทน < > เพื่อทำ template literal
+    let html = `
+        <h2>${player.name} ตอบคำถาม</h2>
+        <p>${q.q}</p>
+        <img src="${q.img}" alt="question image" style="width:200px; height:150px; margin:15px 0;">
+    `;
+
     q.answers.forEach(a => {
         html += `<button class="${a.class}" onclick="choose('${a.house}')">${a.text}</button>`;
     });
+
     document.getElementById("quiz").innerHTML = html;
 }
+
 
