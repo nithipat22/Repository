@@ -6,18 +6,26 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="container">
+<h1>🧙‍♂️ Sorting Hat — แบบทดสอบ 50 คำถาม</h1>
 
-<h1>🧙‍♂️ Sorting Hat Multiplayer</h1>
 
 <div id="setup">
-  <h2>ใส่ชื่อผู้เล่น (คั่นด้วย , )</h2>
-  <input id="playerNames" placeholder="เช่น แพน, จูน, บี" />
-  <br>
-  <button onclick="startGame()">เริ่มเกม</button>
+<p>ใส่ชื่อผู้เล่น (คั่นด้วย comma) เช่น: <em>Harry, Hermione, Ron</em></p>
+<div class="row">
+<input id="playerNames" type="text" value="Harry,Hermione,Ron" placeholder="ใส่ชื่อผู้เล่น">
+<button id="startBtn" class="gryffindor">เริ่มเกม</button>
+</div>
+<p class="small">รูปคำถาม: ใช้ picsum.photos (seed) เพื่อให้รูปขึ้นได้แน่นอน</p>
 </div>
 
-<div id="quiz" class="quiz-container" style="display:none"></div>
-<div id="result"></div>
+
+<div id="quiz" style="display:none;margin-top:14px"></div>
+<div id="result" style="display:none;margin-top:14px"></div>
+
+
+<footer>บันทึก: หากต้องการแก้คำถาม/รูป ให้ส่งมาที่ผมแล้วผมจะแก้ให้</footer>
+</div>
 
 <script src="script.js"></script>
 </body>
