@@ -353,10 +353,10 @@ function showResults(){
   let html = "<h2>ผลลัพธ์ของผู้เล่น</h2>";
 
   const houseInfo = {
-    Gryffindor: {desc:"กล้าหาญและเสียสละ", example:"Harry Potter, Hermione Granger, Ron Weasley", color:"#c41e3a", img:"https://i.imgur.com/5YJrWjC.png"},
-    Hufflepuff: {desc:"ซื่อสัตย์และอดทน", example:"Cedric Diggory, Nymphadora Tonks", color:"#ffdb00", img:"https://i.imgur.com/0y9F8tU.png"},
-    Ravenclaw: {desc:"ฉลาดและคิดสร้างสรรค์", example:"Luna Lovegood, Cho Chang", color:"#222f5b", img:"https://i.imgur.com/wr6r8Rf.png"},
-    Slytherin: {desc:"ทะเยอทะยานและมีไหวพริบ", example:"Draco Malfoy, Severus Snape", color:"#1a472a", img:"https://i.imgur.com/U5q5JQo.png"}
+    Gryffindor: {desc:"กล้าหาญและเสียสละ", example:"Harry Potter, Hermione Granger, Ron Weasley", color:"#c41e3a", img:"./images/img.harry01.jpg"},
+    Hufflepuff: {desc:"ซื่อสัตย์และอดทน", example:"Cedric Diggory, Nymphadora Tonks", color:"#ffdb00", img:"./images/img.harry02.jpg"},
+    Ravenclaw: {desc:"ฉลาดและคิดสร้างสรรค์", example:"Luna Lovegood, Cho Chang", color:"#222f5b", img:"./images/img.harry03.jpg"},
+    Slytherin: {desc:"ทะเยอทะยานและมีไหวพริบ", example:"Draco Malfoy, Severus Snape", color:"#1a472a", img:"./images/img.harry04.jpg"}
   };
 
   players.forEach(p=>{
