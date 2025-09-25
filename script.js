@@ -349,6 +349,7 @@ function choose(house){
 
 function showResults(){
   document.getElementById("quiz").style.display = "none";
+  document.getElementById("result").style.display = "block";
   let html = "<h2>ผลลัพธ์ของผู้เล่น</h2>";
 
   const houseInfo = {
