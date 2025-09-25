@@ -251,21 +251,23 @@ function choose(house){
     showQuestion();
 }
 
-function showResults(){
-    document.getElementById("quiz").style.display = "none";
-    let html = "<h2>ผลลัพธ์ของผู้เล่น</h2>";
-    const houseInfo = {
-        Gryffindor: {desc:"กล้าหาญและเสียสละ", example:"เหมือน Harry, Hermione, Ron", color:"#c41e3a"},
-        Hufflepuff: {desc:"ซื่อสัตย์และอดทน", example:"เหมือน Cedric Diggory", color:"#ffdb00"},
-        Ravenclaw: {desc:"ฉลาดและคิดสร้างสรรค์", example:"เหมือน Luna Lovegood", color:"#222f5b"},
-        Slytherin: {desc:"ทะเยอทะยานและมีไหวพริบ", example:"เหมือน Draco Malfoy", color:"#1a472a"}
-    };
-    players.forEach(p=>{
-        let bestHouse = Object.keys(p.score).reduce((a,b)=>p.score[a]>p.score[b]?a:b);
-        html += `<p style="color:${houseInfo[bestHouse].color}">
-                 <strong>${p.name}</strong> → ${bestHouse}<br>
-                 นิสัย: ${houseInfo[bestHouse].desc}<br>
-                 เหมือนใครที่สุด: ${houseInfo[bestHouse].example}</p>`;
+function showQuestion(){
+    if(currentQ >= questions.length){
+        currentPlayer++;
+        currentQ = 0;
+        if(currentPlayer >= players.length){
+            showResults();
+            return;
+        }
+    }
+    const player = players[currentPlayer];
+    const q = questions[currentQ];
+    let html = `<h2>${player.name} ตอบคำถาม</h2>
+                <p>${q.q}</p>
+                <img src="${q.img}" alt="question image" style="width:200px; height:150px; margin:15px 0;">`;
+    q.answers.forEach(a => {
+        html += `<button class="${a.class}" onclick="choose('${a.house}')">${a.text}</button>`;
     });
-    document.getElementById("result").innerHTML = html;
+    document.getElementById("quiz").innerHTML = html;
 }
+
