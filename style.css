@@ -18,3 +18,21 @@ button:hover { transform: scale(1.05); }
 .ravenclaw { background: #222f5b; color: #fff; }
 .slytherin { background: #1a472a; color: #fff; }
 #result p { font-size: 1.3em; margin: 15px 0; }
+/* รูปภาพประกอบคำถาม */
+.quiz-container img {
+  max-width: 200px;       /* ขนาดรูป */
+  height: auto;
+  border-radius: 15px;
+  margin: 15px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+/* จัดปุ่มให้สวยขึ้นเมื่อมีรูป */
+.quiz-container button {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 12px;
+  font-size: 16px;
+}
+
