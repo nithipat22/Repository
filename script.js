@@ -302,6 +302,24 @@ const questions = [
     {text:"การสร้างสิ่งที่เปลี่ยนแปลงได้", house:"Slytherin", class:"slytherin"}
   ]}
 ];
+let players = [];
+let currentPlayer = 0;
+let currentQ = 0;
+
+// ================== เริ่มเกม ==================
+document.getElementById("startBtn").addEventListener("click", startGame);
+
+function startGame(){
+  const names = document.getElementById("playerNames").value.split(",");
+  players = names.map(name=>({
+    name:name.trim(),
+    score:{Gryffindor:0,Hufflepuff:0,Ravenclaw:0,Slytherin:0}
+  }));
+  document.getElementById("setup").style.display = "none";
+  document.getElementById("quiz").style.display = "block";
+  currentPlayer = 0; currentQ = 0;
+  showQuestion();
+}
 
 function showQuestion(){
   if(currentQ>=questions.length){
