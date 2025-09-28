@@ -73,3 +73,39 @@ footer p {
 .fb-btn:hover {
   background: #145dbf;
 }
+
+/* 📱 Responsive สำหรับจอเล็ก */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  input[type=text] {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+    min-width: 120px;
+  }
+
+  .answers button {
+    min-width: 100%;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 15px;
+  }
+
+  .fb-btn {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
