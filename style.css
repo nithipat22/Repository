@@ -43,3 +43,33 @@ button{cursor:pointer;border:0;padding:10px 14px;border-radius:10px;font-weight:
 .result-meta{flex:1;text-align:left}
 .small{font-size:13px;color:var(--muted)}
 footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+footer {
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+  background: rgba(255,255,255,0.05);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px 10px 0 0;
+}
+
+footer p {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.fb-btn {
+  display: inline-block;
+  background: #1877f2;   /* สีหลักของ Facebook */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.fb-btn:hover {
+  background: #145dbf;
+}
